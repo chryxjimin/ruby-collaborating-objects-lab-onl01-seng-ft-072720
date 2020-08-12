@@ -30,7 +30,9 @@ class Artist
    end
 
    def print_songs
-       puts songs.find_all {|song| song.artist == self}
+       our_songs = songs.find_all {|song| song.artist == self}
+       our_songs.each {|song| puts song.name }
+         
    end
 
 
