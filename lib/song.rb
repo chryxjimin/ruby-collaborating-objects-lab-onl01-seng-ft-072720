@@ -11,8 +11,8 @@ class Song
    end
    #def self.new_by_filename
 
-   def artist_name(artist)
-      Artist.all.find {|artist_inst| Artist.name == artist}
+   def artist_name(artist_name)
+      @artist = Artist.find_or_create_by_name(artist_name)
    end
 
 
